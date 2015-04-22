@@ -15,7 +15,7 @@ function create(spec) {
 		'const ' + sheetId + ' = StyleSheet.create(' + JSON.stringify(spec) + ');'
 	].join('\n');
 	
-	const options = { filename: sheetId, vendorPrefixes: true, compressClassNames: true };
+	const options = { filename: sheetId, vendorPrefixes: true, minify: true, compressClassNames: true };
 
 	const result = transform( wrapped, options );
 
