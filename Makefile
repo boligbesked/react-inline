@@ -3,10 +3,10 @@ BUILD_OPTIONS = --relativize --follow-requires --ignore-dependencies --ignore-no
 MOCHA_OPTIONS = --compilers js:babel-core/register -t 5000 -b -R spec test/spec.js
 
 build: node_modules/
-	@bin/build $(BUILD_OPTIONS) src/ lib/ StyleSheet Extractor Bundler
+	@bin/build $(BUILD_OPTIONS) src/ lib/ StyleSheet WebpackStyleSheet Extractor Bundler
 
 watch: node_modules/
-	@bin/build $(BUILD_OPTIONS) --watch src/ lib/ StyleSheet Extractor Bundler
+	@bin/build $(BUILD_OPTIONS) --watch src/ lib/ StyleSheet WebpackStyleSheet Extractor Bundler
 
 lint: node_modules/
 	@$(BIN)/eslint src/
