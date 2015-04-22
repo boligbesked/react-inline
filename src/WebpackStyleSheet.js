@@ -1,5 +1,5 @@
 /*
- * @providesModule StyleSheet
+ * @providesModule WebpackStyleSheet
  */
 
 import { transform } from './Extractor';
@@ -38,8 +38,9 @@ function compile() {
 	return stylesheets.join('\n');
 }
 
-function extractor() {
-
+function loader(source) {
+	console.log('React Inline - webpack loader');
+	return source;
 }
 
-export { create, compile, extractor };
+export { create, compile, loader };
